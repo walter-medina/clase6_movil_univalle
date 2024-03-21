@@ -32,9 +32,9 @@ class FragmentA : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         calendar = Calendar.getInstance()
-       //navigationStandar()
-        //navigationFragmentB()
-        //pasarDataEntreFragments()
+        //navigationStandar()
+        navigationFragmentB()
+        pasarDataEntreFragments()
         dialogoEstandar()
         dialogoPersonalizado()
         dialogoDataPicker()
@@ -43,15 +43,15 @@ class FragmentA : Fragment() {
 
     }
 
-    private fun navigationStandar() {
-        binding.btnFragmentB.setOnClickListener {
-            val fragmentB = FragmentB()
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragmentContainerStatic, fragmentB)
-            transaction.addToBackStack(null) // Opcional, para permitir retroceder
-            transaction.commit()
-        }
-    }
+//    private fun navigationStandar() {
+//        binding.btnFragmentB.setOnClickListener {
+//            val fragmentB = FragmentB()
+//            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+//            transaction.replace(R.id.fragmentContainerStatic, fragmentB)
+//            transaction.addToBackStack(null) // Opcional, para permitir retroceder
+//            transaction.commit()
+//        }
+//    }
 
     private fun navigationFragmentB(){
         binding.btnNavFragmentB.setOnClickListener {
