@@ -20,7 +20,8 @@ class FragmentCardView : Fragment() {
 
     private lateinit var binding: FragmentCardViewBinding
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCardViewBinding.inflate(inflater)
@@ -30,7 +31,9 @@ class FragmentCardView : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.cvUno.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentCardView_to_fragmentA)
+        }
     }
 
 }
