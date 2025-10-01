@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.clase6.Dialogos.DialogoEstandar
 import com.example.clase6.Dialogos.DialogoEstandar.Companion.showDialog
 import com.example.clase6.Dialogos.DialogoPersonalizado.Companion.showDialogPersonalizado
 import com.example.clase6.R
@@ -33,7 +32,6 @@ class FragmentA : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         calendar = Calendar.getInstance()
-        //navigationStandar()
         navigationFragmentB()
         pasarDataEntreFragments()
         dialogoEstandar()
@@ -41,19 +39,7 @@ class FragmentA : Fragment() {
         dialogoDataPicker()
         dialogoTimePicker()
         cardView()
-
     }
-
-//    private fun navigationStandar() {
-//        binding.btnFragmentB.setOnClickListener {
-//            val fragmentB = FragmentB()
-//            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-//            transaction.replace(R.id.fragmentContainerStatic, fragmentB)
-//            transaction.addToBackStack(null) // Opcional, para permitir retroceder
-//            transaction.commit()
-//        }
-//    }
-
     private fun navigationFragmentB(){
         binding.btnNavFragmentB.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentA_to_fragmentB)
@@ -80,17 +66,14 @@ class FragmentA : Fragment() {
     private  fun dialogoPersonalizado(){
         binding.btnDialogPersonalizado.setOnClickListener {
             showDialogPersonalizado(binding.root.context)
-
         }
     }
-
-    private  fun dialogoDataPicker(){
+    private fun dialogoDataPicker(){
         binding.tvDataPicker.setOnClickListener {
             showDatePickerDialog()
         }
     }
-
-    private  fun dialogoTimePicker(){
+    private fun dialogoTimePicker(){
         binding.tvTimePicker.setOnClickListener {
             showDateTimePicker()
         }
@@ -111,12 +94,9 @@ class FragmentA : Fragment() {
             minute, // Minuto inicial
             true // Especifica si se muestra el modo de reloj de 24 horas
         )
-
         // Muestra el TimePickerDialog
         timePickerDialog.show()
-
     }
-
     private fun showDatePickerDialog() {
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH)
@@ -140,7 +120,6 @@ class FragmentA : Fragment() {
     private  fun cardView(){
         binding.btnCardView.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentA_to_fragmentCardView)
-
         }
     }
 }

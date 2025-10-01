@@ -9,7 +9,6 @@
         android:orientation="vertical"
         android:padding="16dp"
         tools:context=".fragment.FragmentCardView">
-        <!-- A CardView that contains a TextView -->
 
         <TextView
             android:id="@+id/tvFragmentA"
@@ -53,13 +52,6 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
-
     </LinearLayout>
-
-
-
-
 </layout>

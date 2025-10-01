@@ -8,31 +8,6 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <!--TODO: Fragment Estático -->
-<!--        <androidx.fragment.app.FragmentContainerView-->
-<!--            android:id="@+id/fragmentContainerStatic"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:name="com.example.clase6.fragment.FragmentA"-->
-<!--            tools:layout="@layout/fragment_a"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"/>-->
-
-        <!--TODO: Fragment Dinámico-->
-<!--        <androidx.fragment.app.FragmentContainerView-->
-<!--            android:id="@+id/fragmentContainerDinamic"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--TODO: Ir de un FragmentA al FragmentB de la manera standar-->
-
-        <!--TODO: Navigation View-->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navigationContainer"
             android:name="androidx.navigation.fragment.NavHostFragment"
